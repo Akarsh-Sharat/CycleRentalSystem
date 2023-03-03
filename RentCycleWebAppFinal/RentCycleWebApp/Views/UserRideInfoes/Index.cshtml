@@ -1,0 +1,75 @@
+﻿@model IEnumerable<RentCycleWebApp.Models.UserRideInfo>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p style="width:160px">
+    <a asp-action="Create" class="w-100 btn btn-lg gradient-custom-2" style="width:160px;font-size:16px;font-weight:bold">Create New</a>
+</p>
+<table class="customers">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DeviceId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ScanStartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ScanEndTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnlockTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LockTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartPosition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndPosition)
+            </th>
+          bile Number
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeviceId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ScanStartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ScanEndTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnlockTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LockTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartPosition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndPosition)
+            </td>
+
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success btn-sm">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary btn-sm">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

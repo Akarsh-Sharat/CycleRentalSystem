@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "546200866453",
+    "firebase_url": "https://cycleonrent-453fb-default-rtdb.firebaseio.com",
+    "project_id": "cycleonrent-453fb",
+    "storage_bucket": "cycleonrent-453fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546200866453:android:1840b696fcf03ea1e1559c",
+        "android_client_info": {
+          "package_name": "com.mit.cycleonrent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "546200866453-9m6rebe7gnaq3ofte0tujnmjhki5e1l6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mit.cycleonrent",
+            "certificate_hash": "01d287b1c98cab427dd55023413cb3bba969dffe"
+          }
+        },
+        {
+          "client_id": "546200866453-u9aqfe2rqbm0tbh3c7ak4vka9dh6rul1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJlvu_CrghI2ra_63XFMzQAXqErNIVyAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "546200866453-u9aqfe2rqbm0tbh3c7ak4vka9dh6rul1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

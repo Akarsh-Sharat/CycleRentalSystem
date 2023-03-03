@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".PaymentActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar3_payment"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/mainbackgroundcolor"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--edit text for entering amount to be paid-->
+    <EditText
+        android:id="@+id/idEdtAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Enter Amount to be paid"
+        android:inputType="numberDecimal" />
+
+    <!--edit text for entering the upi id
+        to which we have to make payment-->
+    <EditText
+        android:id="@+id/idEdtUpi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idEdtAmount"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:text="elutra.ceo@okhdfcbank"
+        android:visibility="gone"
+        android:inputType="text" />
+
+    <!--edit text for adding the name of the
+        user whom we have to make payment-->
+    <EditText
+        android:id="@+id/idEdtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idEdtUpi"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Enter your Name"
+        android:inputType="text" />
+
+    <!--edit text for adding the description for
+        the payment which we are making-->
+    <EditText
+        android:id="@+id/idEdtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idEdtName"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        android:text="Payment for Rent Cycle"
+        android:inputType="text" />
+
+    <!--button for making a payment-->
+    <Button
+        android:id="@+id/idBtnMakePayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idEdtDescription"
+        android:layout_margin="12dp"
+        android:text="Make Payment"
+        android:textAllCaps="false" />
+
+    <!--text view for displaying transaction status-->
+    <TextView
+        android:id="@+id/idTVTransactionDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idBtnMakePayment"
+        android:layout_marginTop="30dp"
+        android:text="Transaction Details"
+        android:textAlignment="center"
+        android:textColor="@color/purple_700"
+        android:visibility="gone" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="5dp"
+        android:layout_marginTop="200dp"
+        android:layout_below="@id/idBtnMakePayment"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/mainbackgroundcolordark"
+        android:id="@+id/cardSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:padding="7dp"
+                android:layout_gravity="center"
+                android:background="@color/mainbackgroundcolordark"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="22dp"
+                    android:textColor="@color/white"
+                    android:text="SUMMARY"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:padding="7dp"
+                android:gravity="left"
+                android:background="@color/mainbackgroundcolor"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="22dp"
+                    android:textColor="@color/white"
+                    android:text="Total Payment :"
+                    android:layout_gravity="left"
+                    android:textStyle="bold"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="22dp"
+                    android:textColor="@color/white"
+                    android:text=""
+                    android:id="@+id/TotalPayment"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="left"
+                android:padding="7dp"
+                android:background="@color/mainbackgroundcolor"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="22dp"
+                    android:textColor="@color/white"
+                    android:text="Total Ride Cost:"
+                    android:layout_gravity="left"
+                    android:textStyle="bold"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="22dp"
+                    android:textColor="@color/white"
+                    android:text=""
+                    android:id="@+id/TotalRide"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="left"
+                android:padding="7dp"
+                android:background="@color/mainbackgroundcolor"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="22dp"
+                    android:textColor="@color/white"
+                    android:text="Balance :"
+                    android:layout_gravity="left"
+                    android:textStyle="bold"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="22dp"
+                    android:textColor="@color/white"
+                    android:text=""
+                    android:id="@+id/TotalBalance"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyleview"
+        android:layout_width="match_parent"
+        android:layout_marginTop="500dp"
+        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Rent</string>
+    <string name="title_activity_splash">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_main_home">MainHomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Rent</string>
+    <string name="nav_header_subtitle">Pay Later</string>
+    <string name="nav_header_desc">Rent - MIT</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Find a Cycle</string>
+    <string name="menu_scan">Start Ride</string>
+    <string name="menu_gallery">My Rides</string>
+    <string name="menu_slideshow">Payments</string>
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="title_activity_start_ride">START YOUR RIDE</string>
+    <string name="title_activity_ongoing_ride">RIDE CONFIRMED</string>
+    <string name="title_activity_oupi_payement">UPI PAYMENT</string>
+    <string name="title_activity_my_rides">MY RIDES</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>

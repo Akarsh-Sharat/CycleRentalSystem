@@ -1,0 +1,70 @@
+﻿@model RentCycleWebApp.Models.UserRideInfo
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>UserRideInfo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="UserAccountId" class="control-label"></label>
+                <select asp-for="UserAccountId" class="form-control" asp-items="ViewBag.UserAccountId"></select>
+                <span asp-validation-for="UserAccountId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeviceId" class="control-label"></label>
+                <input asp-for="DeviceId" class="form-control" />
+                <span asp-validation-for="DeviceId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScanStartTime" class="control-label"></label>
+                <input asp-for="ScanStartTime" class="form-control" />
+                <span asp-validation-for="ScanStartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScanEndTime" class="control-label"></label>
+                <input asp-for="ScanEndTime" class="form-control" />
+                <span asp-validation-for="ScanEndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnlockTime" class="control-label"></label>
+                <input asp-for="UnlockTime" class="form-control" />
+                <span asp-validation-for="UnlockTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LockTime" class="control-label"></label>
+                <input asp-for="LockTime" class="form-control" />
+                <span asp-validation-for="LockTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartPosition" class="control-label"></label>
+                <input asp-for="StartPosition" class="form-control" />
+                <span asp-validation-for="StartPosition" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndPosition" class="control-label"></label>
+                <input asp-for="EndPosition" class="form-control" />
+                <span asp-validation-for="EndPosition" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

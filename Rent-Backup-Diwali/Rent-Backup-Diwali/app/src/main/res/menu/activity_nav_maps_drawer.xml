@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/find_cycle"
+            android:icon="@drawable/ic_baseline_electric_bike_24"
+            android:title="Find Cycle" />
+        <item
+            android:id="@+id/nav_startRide"
+            android:icon="@drawable/qr_code_scanner_24"
+            android:title="Start Ride" />
+        <item
+            android:id="@+id/nav_myRides"
+            android:icon="@drawable/ic_baseline_bug_report_24"
+            android:title="My Rides" />
+        <item
+            android:id="@+id/nav_payments"
+            android:icon="@drawable/ic_baseline_payments_24"
+            android:title="Payments" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Settings" />
+    </group>
+
+   <!-- <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share111111111" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>-->
+    <!--<include layout="@layout/content_nav_maps"/>-->
+</menu>
