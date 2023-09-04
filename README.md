@@ -28,7 +28,7 @@ CycleRentalSystem is a bicycle rental system that leverages various technologies
 ![Screenshot 1](image-link-1) <br>
 ![Screenshot 2](image-link-2) <br>
 ![Screenshot 3](image-link-3) <br>
-- Web Application
+- Web Application <br>
 ![Screenshot 1](image-link-1) <br>
 ![Screenshot 2](image-link-2) <br>
 ![Screenshot 3](image-link-3) <br>
